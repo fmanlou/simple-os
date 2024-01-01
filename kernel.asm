@@ -15,14 +15,7 @@ or eax, 1
 mov cr0, eax
 
 ; 进入32位模式
-jmp CODE_SEG:main
-
-[bits 32]
-main:
-    mov al, 'A'         ; 字符
-    mov ah, 0x0f        ; 字符颜色: 黑底白字
-    mov [0xb8000], ax   ; 视频内存的起始地址
-    hlt ; 停机
+jmp CODE_SEG:0x8000
 
 GDT_Start:
     null_descriptor:

@@ -3,7 +3,7 @@
 [bits 16]
 
 mov ah, 0x2         ; 设置功能号，表示进行磁盘读取操作
-mov al, 0x01        ; 设置读取的扇区数
+mov al, 0x02        ; 设置读取的扇区数
 xor ch, ch          ; 设置磁道号 Cylinder 0
 mov cl, 2           ; 设置扇区号 Sector 2
 xor dh, dh          ; 设置磁头号 Head 0
